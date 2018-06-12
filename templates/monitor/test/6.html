@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide {
+            display: none;
+        }
+        .modal{
+            position: fixed;
+            top:50%;
+            left: 50%;
+            width: 500px;
+            height: 200px;
+            margin-left: -250px;
+            margin-top: -100px;
+            background-color: bisque;
+            z-index:10;
+        }
+        .shadow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.6;
+            background-color: black;
+            z-index: 9;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="添加" onclick="add();"/>
+    <div class="shadow hide"></div>
+    <div class="modal hide">
+        <p>
+        <input type="text" name="id" value="ID"/>
+        </p>
+        <p>
+        <input type="text" name="ip" value="Ip"/>
+        </p>
+        <p>
+        <input type="text" name="port" value="Port"/>
+        </p>
+        <input type="button" value="确定" onclick="determine()"/>
+        <input type="button" value="取消" onclick="addCancel()"/>
+    </div>
+
+    <table border="1" bgcolor="#9370db">
+        <tr>
+            <th>ID</th>
+            <th>Ip</th>
+            <th>Port</th>
+            <th>修改</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>10.0.0.12</td>
+            <td>80</td>
+            <td>
+                <a class="c">编辑</a>|<a>删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>10.0.0.13</td>
+            <td>81</td>
+            <td>
+                <a class="c">编辑</a>|<a>删除</a>
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>10.0.0.14</td>
+            <td>83</td>
+            <td>
+                <a class="c">编辑</a>|<a>删除</a>
+            </td>
+        </tr>
+    </table>
+
+    <script type="text/javascript" src="jquery-1.12.4.js"></script>
+<script>
+    $('.c').click(function () {
+        var message = $(this).parent().siblings();
+        var id = $(message[0]).text();
+        var ip = $(message[1]).text();
+        var port = $(message[2]).text();
+        $('.modal input[name=id]').val(id);
+        $('.modal input[name=ip]').val(ip);
+        $('.modal input[name=port]').val(port);
+        $('.hide').removeClass('hide');
+
+
+    });
+    function add() {
+        $('.hide').removeClass('hide');
+    }
+    function addCancel() {
+        $('.modal,.shadow').addClass('hide');
+        $('.modal input[type=text]').val("");
+    }
+    function determine() {
+        var message = $(this).parent();
+        console.log(message)
+    }
+    
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .header{
+            background-color: red;
+            color: black;
+        }
+        .content{
+            background-color: black;
+            color: white;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div style='border: solid red 1px;width: 200px;height: 500px'>
+    <div class="item">
+        <div class="header">标题一</div>
+        <div class="content">内容1</div>
+    </div>
+    <div class="item">
+        <div class="header">标题一</div>
+        <div class="content hide">内容2</div>
+    </div>
+    <div class="item">
+        <div class="header">标题一</div>
+        <div class="content hide">内容3</div>
+    </div>
+    <div>
+<script type="text/javascript" src="jquery-1.12.4.js"></script>
+<script>
+    $('.header').click(function(){
+        $(this).next().removeClass('hide');
+        $(this).parent().siblings().find('.content').addClass('hide')
+    })
+</script>
+
+</body>
+</html>

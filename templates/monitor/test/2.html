@@ -1,0 +1,251 @@
+{% extends 'monitor/index.html' %}
+{% block header-menu %}
+    <header id="navbar">
+			<div id="navbar-container" class="boxed">
+
+				<!--Brand logo & name-->
+				<!--================================-->
+				<div class="navbar-header">
+					<a href="{% url 'dashboard' %}" class="navbar-brand">
+						<!--img src="img/logo.png" alt="Nifty Logo" class="brand-icon" -->
+						<div class="brand-title">
+                            {% block l-title %}<span class="brand-text">账号设置</span>{% endblock %}
+{#							<span class="brand-text">Profile</span>#}
+						</div>
+					</a>
+				</div>
+				<!--================================-->
+				<!--End brand logo & name-->
+
+
+				<!--Navbar Dropdown-->
+				<!--================================-->
+				<div class="navbar-content clearfix">
+					<ul class="nav navbar-top-links pull-left">
+
+						<!--Navigation toogle button-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="tgl-menu-btn">
+							<a class="mainnav-toggle" href="#">
+								<i class="fa fa-navicon fa-lg"></i>
+							</a>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End Navigation toogle button-->
+
+
+
+
+
+
+						<!--Notification dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+								<i class="fa fa-bell fa-lg"></i>
+								<span class="badge badge-header badge-danger">5</span>
+							</a>
+
+
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End notifications dropdown-->
+
+
+
+						<!--Mega dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="mega-dropdown">
+							<a href="#" class="mega-dropdown-toggle">
+								<i class="fa fa-th-large fa-lg"></i>
+							</a>
+							<div class="dropdown-menu mega-dropdown-menu">
+								<div class="clearfix">
+									<div class="col-sm-12 col-md-3">
+
+										<!--Mega menu widget-->
+										<div class="text-center bg-purple pad-all">
+											<h3 class="text-thin mar-no">Weekend shopping</h3>
+											<div class="pad-ver box-inline">
+												<span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
+													<i class="fa fa-shopping-cart fa-4x"></i>
+												</span>
+											</div>
+											<p class="pad-btm">
+												Members get <span class="text-lg text-bold">50%</span> more points. Lorem ipsum dolor sit amet!
+											</p>
+											<a href="#" class="btn btn-purple">Learn More...</a>
+										</div>
+
+									</div>
+									<div class="col-sm-4 col-md-3">
+
+										<!--Mega menu list-->
+										<ul class="list-unstyled">
+											<li class="dropdown-header">Pages</li>
+											<li><a href="#">Profile</a></li>
+											<li><a href="#">Search Result</a></li>
+											<li><a href="#">FAQ</a></li>
+											<li><a href="#">Sreen Lock</a></li>
+											<li><a href="#" class="disabled">Disabled</a></li>
+											<li class="divider"></li>
+											<li class="dropdown-header">Icons</li>
+											<li><a href="#"><span class="pull-right badge badge-purple">479</span> Font Awesome</a></li>
+											<li><a href="#">Skycons</a></li>
+										</ul>
+
+									</div>
+									<div class="col-sm-4 col-md-3">
+
+										<!--Mega menu list-->
+										<ul class="list-unstyled">
+											<li class="dropdown-header">Mailbox</li>
+											<li><a href="#"><span class="pull-right label label-danger">Hot</span>Indox</a></li>
+											<li><a href="#">Read Message</a></li>
+											<li><a href="#">Compose</a></li>
+											<li class="divider"></li>
+											<li class="dropdown-header">Featured</li>
+											<li><a href="#">Smart navigation</a></li>
+											<li><a href="#"><span class="pull-right badge badge-success">6</span>Exclusive plugins</a></li>
+											<li><a href="#">Lot of themes</a></li>
+											<li><a href="#">Transition effects</a></li>
+										</ul>
+
+									</div>
+									<div class="col-sm-4 col-md-3">
+
+										<!--Mega menu list-->
+										<ul class="list-unstyled">
+											<li class="dropdown-header">Components</li>
+											<li><a href="#">Tables</a></li>
+											<li><a href="#">Charts</a></li>
+											<li><a href="#">Forms</a></li>
+											<li class="divider"></li>
+											<li>
+												<form role="form" class="form">
+													<div class="form-group">
+														<label class="dropdown-header" for="demo-megamenu-input">Newsletter</label>
+														<input id="demo-megamenu-input" type="email" placeholder="Enter email" class="form-control">
+													</div>
+													<button class="btn btn-primary btn-block" type="submit">Submit</button>
+												</form>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End mega dropdown-->
+
+					</ul>
+					<ul class="nav navbar-top-links pull-right">
+
+
+						<!--User dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li id="dropdown-user" class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+								<span class="pull-right">
+									<img class="img-circle img-user media-object" src="/static/unity/img/touxiang.jpg" alt="Profile Picture">
+								</span>
+								<div class="username hidden-xs">Topaz</div>
+							</a>
+
+
+							<div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default">
+
+								<!-- Dropdown heading  -->
+								<div class="pad-all bord-btm">
+									<p class="text-lg text-muted text-thin mar-btm">750Gb of 1,000Gb Used</p>
+									<div class="progress progress-sm">
+										<div class="progress-bar" style="width: 70%;">
+											<span class="sr-only">70%</span>
+										</div>
+									</div>
+								</div>
+
+
+								<!-- User dropdown menu -->
+								<ul class="head-list">
+									<li>
+										<a href="{% url 'profile' %}">    {# 这里设置昵称和头像 #}
+											<i class="fa fa-user fa-fw fa-lg"></i> Profile
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="badge badge-danger pull-right">9</span>
+											<i class="fa fa-envelope fa-fw fa-lg"></i> Messages
+										</a>
+									</li>
+									<li>
+										<a href="#">        {# 这里去找admin #}
+											<span class="label label-success pull-right">New</span>
+											<i class="fa fa-gear fa-fw fa-lg"></i> Settings
+										</a>
+									</li>
+								</ul>
+
+								<!-- Dropdown footer -->
+								<div class="pad-all text-right">    {# 这里登出 #}
+									<a href="pages-login.html" class="btn btn-primary">
+										<i class="fa fa-sign-out fa-fw"></i> Logout
+									</a>
+								</div>
+							</div>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End user dropdown-->
+
+					</ul>
+				</div>
+				<!--================================-->
+				<!--End Navbar Dropdown-->
+
+			</div>
+		</header>
+{% endblock %}
+{% block main-page %}
+    <div id="page-title" style="padding: 83px 216px 19px 216px;">
+    <h2 class="page-header text-overflow">基本资料</h2>
+    </div>
+<div id="page-content" style="padding: 0px 216px 0px">
+    <div class="row">
+      <div class="col-lg-12"><div class="panel">
+          <div class="panel-heading" style="height: auto">
+              <div class="panel-control" >
+                  <button id="demo-panel-network-refresh" data-toggle="panel-overlay" data-target="#demo-panel-network" class="btn"><i class="fa fa-rotate-right"></i></button>
+                  <div class="btn-group">
+                      <button class="dropdown-toggle btn" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-gear"></i></button>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <h3 class="panel-title">主机状态</h3>
+              <table>
+                  <tr>
+                      <td>昵称</td>
+                      <td><input type="text"></td>
+                  </tr>
+                  <tr>
+                      <td>头像</td>
+                      <td><img src="DogeggLi.png"></td>
+                  </tr>
+              </table>
+
+          </div>
+      </div>
+        <!--===================================================-->
+        <!--End network line chart-->
+
+    </div>
+
+  </div>
+</div>
+{% endblock %}

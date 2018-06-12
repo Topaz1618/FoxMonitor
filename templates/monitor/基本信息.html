@@ -1,0 +1,345 @@
+{% extends 'monitor/index.html' %}
+{% block header-menu %}
+    <header id="navbar">
+			<div id="navbar-container" class="boxed">
+
+				<!--Brand logo & name-->
+				<!--================================-->
+				<div class="navbar-header">
+					<a href="{% url 'dashboard' %}" class="navbar-brand">
+						<!--img src="img/logo.png" alt="Nifty Logo" class="brand-icon" -->
+						<div class="brand-title">
+                            {% block l-title %}<span class="brand-text">账号设置</span>{% endblock %}
+{#							<span class="brand-text">Profile</span>#}
+						</div>
+					</a>
+				</div>
+				<!--================================-->
+				<!--End brand logo & name-->
+
+
+				<!--Navbar Dropdown-->
+				<!--================================-->
+				<div class="navbar-content clearfix">
+					<ul class="nav navbar-top-links pull-left">
+
+						<!--Navigation toogle button-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="tgl-menu-btn">
+							<a class="mainnav-toggle" href="#">
+								<i class="fa fa-navicon fa-lg"></i>
+							</a>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End Navigation toogle button-->
+
+
+
+
+
+
+						<!--Notification dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+								<i class="fa fa-bell fa-lg"></i>
+								<span class="badge badge-header badge-danger">5</span>
+							</a>
+
+
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End notifications dropdown-->
+
+
+
+						<!--Mega dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="mega-dropdown">
+							<a href="#" class="mega-dropdown-toggle">
+								<i class="fa fa-th-large fa-lg"></i>
+							</a>
+							<div class="dropdown-menu mega-dropdown-menu">
+								<div class="clearfix">
+									<div class="col-sm-12 col-md-3">
+
+										<!--Mega menu widget-->
+										<div class="text-center bg-purple pad-all">
+											<h3 class="text-thin mar-no">Weekend shopping</h3>
+											<div class="pad-ver box-inline">
+												<span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
+													<i class="fa fa-shopping-cart fa-4x"></i>
+												</span>
+											</div>
+											<p class="pad-btm">
+												Members get <span class="text-lg text-bold">50%</span> more points. Lorem ipsum dolor sit amet!
+											</p>
+											<a href="#" class="btn btn-purple">Learn More...</a>
+										</div>
+
+									</div>
+									<div class="col-sm-4 col-md-3">
+
+										<!--Mega menu list-->
+										<ul class="list-unstyled">
+											<li class="dropdown-header">Pages</li>
+											<li><a href="#">Profile</a></li>
+											<li><a href="#">Search Result</a></li>
+											<li><a href="#">FAQ</a></li>
+											<li><a href="#">Sreen Lock</a></li>
+											<li><a href="#" class="disabled">Disabled</a></li>
+											<li class="divider"></li>
+											<li class="dropdown-header">Icons</li>
+											<li><a href="#"><span class="pull-right badge badge-purple">479</span> Font Awesome</a></li>
+											<li><a href="#">Skycons</a></li>
+										</ul>
+
+									</div>
+									<div class="col-sm-4 col-md-3">
+
+										<!--Mega menu list-->
+										<ul class="list-unstyled">
+											<li class="dropdown-header">Mailbox</li>
+											<li><a href="#"><span class="pull-right label label-danger">Hot</span>Indox</a></li>
+											<li><a href="#">Read Message</a></li>
+											<li><a href="#">Compose</a></li>
+											<li class="divider"></li>
+											<li class="dropdown-header">Featured</li>
+											<li><a href="#">Smart navigation</a></li>
+											<li><a href="#"><span class="pull-right badge badge-success">6</span>Exclusive plugins</a></li>
+											<li><a href="#">Lot of themes</a></li>
+											<li><a href="#">Transition effects</a></li>
+										</ul>
+
+									</div>
+									<div class="col-sm-4 col-md-3">
+
+										<!--Mega menu list-->
+										<ul class="list-unstyled">
+											<li class="dropdown-header">Components</li>
+											<li><a href="#">Tables</a></li>
+											<li><a href="#">Charts</a></li>
+											<li><a href="#">Forms</a></li>
+											<li class="divider"></li>
+											<li>
+												<form role="form" class="form">
+													<div class="form-group">
+														<label class="dropdown-header" for="demo-megamenu-input">Newsletter</label>
+														<input id="demo-megamenu-input" type="email" placeholder="Enter email" class="form-control">
+													</div>
+													<button class="btn btn-primary btn-block" type="submit">Submit</button>
+												</form>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End mega dropdown-->
+
+					</ul>
+					<ul class="nav navbar-top-links pull-right">
+
+
+						<!--User dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li id="dropdown-user" class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+								<span class="pull-right">
+									<img class="img-circle img-user media-object" src="/static/unity/img/touxiang.jpg" alt="Profile Picture">
+								</span>
+								<div class="username hidden-xs">Topaz</div>
+							</a>
+
+
+							<div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default">
+
+								<!-- Dropdown heading  -->
+								<div class="pad-all bord-btm">
+									<p class="text-lg text-muted text-thin mar-btm">750Gb of 1,000Gb Used</p>
+									<div class="progress progress-sm">
+										<div class="progress-bar" style="width: 70%;">
+											<span class="sr-only">70%</span>
+										</div>
+									</div>
+								</div>
+
+
+								<!-- User dropdown menu -->
+								<ul class="head-list">
+									<li>
+										<a href="{% url 'profile' %}">    {# 这里设置昵称和头像 #}
+											<i class="fa fa-user fa-fw fa-lg"></i> Profile
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="badge badge-danger pull-right">9</span>
+											<i class="fa fa-envelope fa-fw fa-lg"></i> Messages
+										</a>
+									</li>
+									<li>
+										<a href="#">        {# 这里去找admin #}
+											<span class="label label-success pull-right">New</span>
+											<i class="fa fa-gear fa-fw fa-lg"></i> Settings
+										</a>
+									</li>
+								</ul>
+
+								<!-- Dropdown footer -->
+								<div class="pad-all text-right">    {# 这里登出 #}
+									<a href="pages-login.html" class="btn btn-primary">
+										<i class="fa fa-sign-out fa-fw"></i> Logout
+									</a>
+								</div>
+							</div>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End user dropdown-->
+
+					</ul>
+				</div>
+				<!--================================-->
+				<!--End Navbar Dropdown-->
+
+			</div>
+		</header>
+{% endblock %}
+{% block main-page %}
+<div class="main-content" id="bind-content">
+	<div class="reset-area">
+		<div class="set-tags top30">
+			<a href="/profile" class="tb w-active">帐号设置</a>
+     		<div class="set-line"></div>
+
+		</div>
+		<div class="set-nav">
+			<a class="active" href="javascript:;">基本信息</a>
+			<a href="/profile/password/edit">修改密码</a>
+			<a href="/profile/email/edit">修改联系邮箱</a>
+		</div>
+
+		<div class="info-table">
+		<input type="hidden" name="jid" id="hidJid" value="cdu_48170878560">
+    	<table cellspacing="0" cellpadding="0" border="0" style="width:710px;">
+    	  <tbody>
+
+    	  <tr>
+    	    <td class="t1" style="padding-top:27px">昵称</td>
+    	    <td class="td2">
+
+            	<input type="text" tabindex="2" maxlength="10" id="nick" class="text text-normal new-text" name="nick" usernick="Topaz" value="Topaz">
+
+
+            </td>
+    	     <td class="td3" style="vertical-align:middle">
+
+            	<div id="tips_userNick" class="tips-bigbox" style="margin-top:-3px">
+                    <div class="tips-smallbox-blue tips-info">
+                    	10个汉字，支持中英文、数字或下划线
+                    </div>
+                    <div class="blue-corner arrow"></div>
+                    <div class="blue-vertical-back right-blue"></div>
+                    <div class="blue-cross-back bottom-blue"></div>
+                    <div class="blue-corner top-left"></div><div class="blue-corner top-right"></div>
+                    <div class="blue-corner bom-left"></div><div class="blue-corner bom-right"></div>
+                </div>
+
+                <div id="tips_userNickError" class="tips-bigbox" style="margin-top:-3px">	<!-- 支持中英文、数字、下划线 -->
+                    <div class="tips-smallbox-red tips-info">不能超过10个汉字</div>
+                    <div class="red-corner arrow"></div>
+                    <div class="red-vertical-back right-blue"></div>
+                    <div class="red-cross-back bottom-blue"></div>
+                    <div class="red-corner top-left"></div><div class="red-corner top-right"></div>
+                    <div class="red-corner bom-left"></div><div class="red-corner bom-right"></div>
+                </div>
+                <div id="usernick_sucess_ico" class="sucess-ico" style="display: none;background-position:0px -616px;margin-top:-2px"></div>
+            </td>
+  	    </tr>
+    	 <tr>
+    	 <!-- /release/uploadPicture.do -->
+    	    <td class="t1" style="vertical-align:top">头像</td>
+    	    <td class="td2">
+    	    	<div class="my-photo" style="float:left"><img src="/images/image48.png" id="personImgUrl"></div>
+    	    	<a href="javascript:;" class="portrait mod-head-a" id="modifyPersonPhoto">修改头像</a>
+            </td>
+    	    <td class="td3" style="padding-bottom:2px;padding-left:6px">
+            	<input type="hidden" name="imgUrl" id="hidImgUrl" value="/images/image48.png" userimgurl="/images/image48.png">
+            </td>
+  	    </tr>
+  	    <tr>
+    	    <td class="t1">性别</td>
+    	    <td class="td2">
+  				<input type="radio" name="sex" id="female" checked="checked" value="false">
+				<label for="female">女</label>
+				<input type="radio" name="sex" usersex="false" id="male" value="true">
+				<label for="male">男</label>
+            </td>
+    	    <td class="td3">
+
+            </td>
+  	    </tr>
+
+  	    <tr>
+    	    <td class="t1">地区</td>
+    	    <td class="td2" style="width:155px;">
+<select name="proveName" id="proveName" onchange="setcity(this.options[this.selectedIndex].value, '')"><option value="10101" selected="selected">北京</option><option value="10102">上海</option><option value="10103">天津</option><option value="10104">重庆</option><option value="10105">黑龙江</option><option value="10106">吉林</option><option value="10107">辽宁</option><option value="10108">内蒙古</option><option value="10109">河北</option><option value="10110">山西</option><option value="10111">陕西</option><option value="10112">山东</option><option value="10113">新疆</option><option value="10114">西藏</option><option value="10115">青海</option><option value="10116">甘肃</option><option value="10117">宁夏</option><option value="10118">河南</option><option value="10119">江苏</option><option value="10120">湖北</option><option value="10121">浙江</option><option value="10122">安徽</option><option value="10123">福建</option><option value="10124">江西</option><option value="10125">湖南</option><option value="10126">贵州</option><option value="10127">四川</option><option value="10128">广东</option><option value="10129">云南</option><option value="10130">广西</option><option value="10131">海南</option><option value="10132">香港</option><option value="10133">澳门</option><option value="10134">台湾</option><option value="00000">海外</option></select> <select name="cityName" id="cityName"><option value="北京">北京</option><option value="海淀">海淀</option><option value="朝阳" selected="selected">朝阳</option><option value="顺义">顺义</option><option value="怀柔">怀柔</option><option value="通州">通州</option><option value="昌平">昌平</option><option value="延庆">延庆</option><option value="丰台">丰台</option><option value="石景山">石景山</option><option value="大兴">大兴</option><option value="房山">房山</option><option value="密云">密云</option><option value="门头沟">门头沟</option><option value="平谷">平谷</option><option value="西城">西城</option><option value="东城">东城</option></select>
+            </td>
+    	    <td class="td3" style="vertical-align:1px;">
+
+
+            </td>
+  	    </tr>
+
+		<tr>
+			<td class="t1">签名档</td>
+			<td class="td2" style="width:155px;">
+	        	<textarea id="usersign" maxlength="100" class="sign new-text" style="width:200px;height:100px;resize:none;padding:5px;line-height:14px;"></textarea>
+			</td>
+
+			<td class="td3" style="vertical-align:middle">
+
+				<div id="tips_userSign" class="tips-bigbox" style="margin-top:-3px">
+					<div class="tips-smallbox-blue tips-info">
+					100个字符以内
+					</div>
+					<div class="blue-corner arrow"></div>
+					<div class="blue-vertical-back right-blue"></div>
+					<div class="blue-cross-back bottom-blue"></div>
+					<div class="blue-corner top-left"></div><div class="blue-corner top-right"></div>
+					<div class="blue-corner bom-left"></div><div class="blue-corner bom-right"></div>
+				</div>
+
+				<div id="tips_userSignError" class="tips-bigbox" style="margin-top:-3px">	<!-- 支持中英文、数字、下划线 -->
+					<div class="tips-smallbox-red tips-info">不能超过100个字符</div>
+					<div class="red-corner arrow"></div>
+					<div class="red-vertical-back right-blue"></div>
+					<div class="red-cross-back bottom-blue"></div>
+					<div class="red-corner top-left"></div><div class="red-corner top-right"></div>
+					<div class="red-corner bom-left"></div><div class="red-corner bom-right"></div>
+				</div>
+				<div id="usersign_sucess_ico" class="sucess-ico" style="display: none;background-position:0px -616px;margin-top:-2px"></div>
+			</td>
+		</tr>
+
+  	    <tr>
+  	    	<td class="t1" colspan="3">
+    	 		<a class="common-btn" href="javascript:;" id="person_info_save_btn">保存</a>
+
+     			<div class="loading-ico" id="info_loading_ico">
+      				保存中，请稍候...
+      			</div>
+    	 	</td>
+  	    </tr>
+  	  </tbody>
+  	  </table>
+
+    </div>
+
+		</div>
+   </div>
+{#    <div style="position: fixed;width: 800px;height: 1000px;background-color: white;z-index: 2;left: 330px;bottom:71px;top:120px">#}
+{#    </div>#}
+
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <p>
+        <input type="button" onclick="Jsonp1();"  value='提交'/>
+    </p>
+
+    <p>
+        <input type="button" onclick="Jsonp2();" value='提交'/>
+    </p>
+
+    <script type="text/javascript" src="jquery-1.12.4.js"></script>
+    <script>
+        function Jsonp1(){
+            var tag = document.createElement('script');
+            tag.src = "http://www.cnblogs.com/";
+            document.head.appendChild(tag);
+            document.head.removeChild(tag);
+
+        }
+        function Jsonp2(){
+            $.ajax({
+                url: "http://m.maiziedu.com/",
+                type: 'GET',
+                dataType: 'JSONP',
+                success: function(data, statusText, xmlHttpRequest){
+                    console.log(data);
+                }
+            })
+        }
+    </script>
+</body>
+</html>

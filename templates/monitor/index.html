@@ -1,0 +1,646 @@
+{% extends 'monitor/base.html' %}
+
+{% block content-container %}
+
+<div id="container" class=" mainnav-lg mainnav-fixed navbar-fixed aside-fixed footer-fixed">
+
+		<!--NAVBAR-->
+		<!--===================================================-->
+    {% block header-menu %}
+		<header id="navbar">
+			<div id="navbar-container" class="boxed">
+
+				<!--Brand logo & name-->
+				<!--================================-->
+				<div class="navbar-header">
+					<a href="{% url 'dashboard' %}" class="navbar-brand">
+						<!--img src="img/logo.png" alt="Nifty Logo" class="brand-icon" -->
+						<div class="brand-title">
+
+							<span class="brand-text">Hello Monitor</span>
+
+						</div>
+					</a>
+				</div>
+
+				<!--================================-->
+				<!--End brand logo & name-->
+
+
+				<!--Navbar Dropdown-->
+				<!--================================-->
+				<div class="navbar-content clearfix">
+					<ul class="nav navbar-top-links pull-left">
+
+						<!--Navigation toogle button-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="tgl-menu-btn">
+							<a class="mainnav-toggle" href="#">
+								<i class="fa fa-navicon fa-lg"></i>
+							</a>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End Navigation toogle button-->
+
+
+
+
+
+
+						<!--Notification dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+								<i class="fa fa-bell fa-lg"></i>
+								<span class="badge badge-header badge-danger">5</span>
+							</a>
+
+
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End notifications dropdown-->
+
+
+
+						<!--Mega dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li class="mega-dropdown">
+							<a href="#" class="mega-dropdown-toggle">
+								<i class="fa fa-th-large fa-lg"></i>
+							</a>
+							<div class="dropdown-menu mega-dropdown-menu">
+								<div class="clearfix">
+									<div class="col-sm-12 col-md-3">
+
+										<!--Mega menu widget-->
+										<div class="text-center bg-purple pad-all">
+											<h3 class="text-thin mar-no">Weekend shopping</h3>
+											<div class="pad-ver box-inline">
+												<span class="icon-wrap icon-wrap-lg icon-circle bg-trans-light">
+													<i class="fa fa-shopping-cart fa-4x"></i>
+												</span>
+											</div>
+											<p class="pad-btm">
+												Members get <span class="text-lg text-bold">50%</span> more points. Lorem ipsum dolor sit amet!
+											</p>
+											<a href="#" class="btn btn-purple">Learn More...</a>
+										</div>
+
+									</div>
+									<div class="col-sm-4 col-md-3">
+
+										<!--Mega menu list-->
+										<ul class="list-unstyled">
+											<li class="dropdown-header">Pages</li>
+											<li><a href="#">Profile</a></li>
+											<li><a href="#">Search Result</a></li>
+											<li><a href="#">FAQ</a></li>
+											<li><a href="#">Sreen Lock</a></li>
+											<li><a href="#" class="disabled">Disabled</a></li>
+											<li class="divider"></li>
+											<li class="dropdown-header">Icons</li>
+											<li><a href="#"><span class="pull-right badge badge-purple">479</span> Font Awesome</a></li>
+											<li><a href="#">Skycons</a></li>
+										</ul>
+
+									</div>
+									<div class="col-sm-4 col-md-3">
+
+										<!--Mega menu list-->
+										<ul class="list-unstyled">
+											<li class="dropdown-header">Mailbox</li>
+											<li><a href="#"><span class="pull-right label label-danger">Hot</span>Indox</a></li>
+											<li><a href="#">Read Message</a></li>
+											<li><a href="#">Compose</a></li>
+											<li class="divider"></li>
+											<li class="dropdown-header">Featured</li>
+											<li><a href="#">Smart navigation</a></li>
+											<li><a href="#"><span class="pull-right badge badge-success">6</span>Exclusive plugins</a></li>
+											<li><a href="#">Lot of themes</a></li>
+											<li><a href="#">Transition effects</a></li>
+										</ul>
+
+									</div>
+									<div class="col-sm-4 col-md-3">
+
+										<!--Mega menu list-->
+										<ul class="list-unstyled">
+											<li class="dropdown-header">Components</li>
+											<li><a href="#">Tables</a></li>
+											<li><a href="#">Charts</a></li>
+											<li><a href="#">Forms</a></li>
+											<li class="divider"></li>
+											<li>
+												<form role="form" class="form">
+													<div class="form-group">
+														<label class="dropdown-header" for="demo-megamenu-input">Newsletter</label>
+														<input id="demo-megamenu-input" type="email" placeholder="Enter email" class="form-control">
+													</div>
+													<button class="btn btn-primary btn-block" type="submit">Submit</button>
+												</form>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End mega dropdown-->
+
+					</ul>
+					<ul class="nav navbar-top-links pull-right">
+
+
+						<!--User dropdown-->
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<li id="dropdown-user" class="dropdown">
+							<a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+								<span class="pull-right">
+									<img class="img-circle img-user media-object" src="/static/unity/img/touxiang.jpg" alt="Profile Picture">
+								</span>
+								<div class="username hidden-xs">Topaz</div>
+							</a>
+
+
+							<div class="dropdown-menu dropdown-menu-md dropdown-menu-right with-arrow panel-default">
+
+								<!-- Dropdown heading  -->
+								<div class="pad-all bord-btm">
+									<p class="text-lg text-muted text-thin mar-btm">750Gb of 1,000Gb Used</p>
+									<div class="progress progress-sm">
+										<div class="progress-bar" style="width: 70%;">
+											<span class="sr-only">70%</span>
+										</div>
+									</div>
+								</div>
+
+
+								<!-- User dropdown menu -->
+								<ul class="head-list">
+									<li>
+										<a href="{% url 'profile' %}">    {# 这里设置昵称和头像 #}
+											<i class="fa fa-user fa-fw fa-lg"></i> Profile
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="badge badge-danger pull-right">9</span>
+											<i class="fa fa-envelope fa-fw fa-lg"></i> Messages
+										</a>
+									</li>
+									<li>
+										<a href="#">        {# 这里去找admin #}
+											<span class="label label-success pull-right">New</span>
+											<i class="fa fa-gear fa-fw fa-lg"></i> Settings
+										</a>
+									</li>
+								</ul>
+
+								<!-- Dropdown footer -->
+								<div class="pad-all text-right">    {# 这里登出 #}
+									<a href="pages-login.html" class="btn btn-primary">
+										<i class="fa fa-sign-out fa-fw"></i> Logout
+									</a>
+								</div>
+							</div>
+						</li>
+						<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+						<!--End user dropdown-->
+
+					</ul>
+				</div>
+				<!--================================-->
+				<!--End Navbar Dropdown-->
+
+			</div>
+		</header>
+		<!--===================================================-->
+		<!--END NAVBAR-->
+    {% endblock %}
+    {% block main-page %}
+		<div class="boxed">
+
+			<!--CONTENT CONTAINER-->
+			<!--===================================================-->
+			<div id="content-container">
+
+				<!--Page Title-->
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+				<div id="page-title">
+					<h2 class="page-header text-overflow">{% block page-title %}your page title{% endblock %}</h2>
+
+					<!--Searchbox-->
+					<div class="searchbox">
+						<div class="input-group custom-search-form">
+							<input type="text" class="form-control" placeholder="Search..">
+							<span class="input-group-btn">
+								<button class="text-muted" type="button"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+				<!--End page title-->
+
+
+				<!--Breadcrumb-->
+                {% block breadcrumb%}
+				<ol class="breadcrumb">
+					<li><a href="{% url 'dashboard' %}">Home</a></li>
+				</ol>
+                {% endblock %}
+				<!--End breadcrumb-->
+
+
+
+
+				<!--Page content-->
+				<!--===================================================-->
+
+                <div id="page-content">
+
+                {% block page-content %}
+
+					<!-- QUICK TIPS -->
+					<!-- ==================================================================== -->
+					<h3>Welcome to my monitor ...</h3>
+                    <div>
+                        <img style="opacity:0.8;border-radius: 10%;" class="media-object" src="/static/unity/img/DogeggLi.png" alt="Profile Picture">
+                    </div>
+					<!-- ==================================================================== -->
+					<!-- END QUICK TIPS -->
+
+                {% endblock %}
+				</div>
+				<!--===================================================-->
+				<!--End page content-->
+
+
+			</div>
+			<!--===================================================-->
+			<!--END CONTENT CONTAINER-->
+
+
+
+			<!--MAIN NAVIGATION-->
+			<!--===================================================-->
+        {% block l %}
+			<nav id="mainnav-container">
+				<div id="mainnav">
+
+					<!--Shortcut buttons-->
+					<!--================================-->
+
+					<!--================================-->
+					<!--End shortcut buttons-->
+
+
+					<!--Menu-->
+					<!--================================-->
+
+					<div id="mainnav-menu-wrap">
+						<div class="nano">
+							<div class="nano-content">
+								<ul id="mainnav-menu" class="list-group">
+
+									<!--Category name-->
+
+									<!--Menu list item-->
+									<li class="">
+										<a href="{% url 'dashboard' %}">
+											<i class="fa fa-plane"></i>
+											<span class="menu-title">监控大盘</span>
+										</a>
+									</li>
+
+                                    <li class="active-sub">
+										<a href="#">
+											<i class="fa fa-th"></i>
+											<span class="menu-title">分类视图</span>
+											<i class="arrow"></i>
+										</a>
+
+										<!--Submenu-->
+										<ul class="collapse">
+											<li><a href="{% url 'hosts' %}">Hosts</a></li>
+											<li class=""><a href="{% url 'host_groups' %}">HostGroups</a></li>
+											<li><a href="#">Templates</a></li>
+											<li><a href="#">Items</a></li>
+                                            <li><a href="#">Triggers</a></li>
+                                            <li><a href="#">Action</a></li>
+											<li class="list-divider"></li>
+
+										</ul>
+									</li>
+									<!--Menu list item-->
+									<li>
+										<a href="{% url 'triggers' %}">
+											<i class="fa fa-dashboard"></i>
+                                            <span class="menu-title">
+												<strong>报警</strong>
+												<span class="pull-right badge badge-purple">7</span>
+											</span>
+										</a>
+									</li>
+
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="fa fa-area-chart"></i>
+											<span class="menu-title">
+												<strong>图表</strong>
+												<span class="label label-success pull-right">New</span>
+											</span>
+										</a>
+									</li>
+
+									<!--Menu list item-->
+
+									<!--Menu list item-->
+
+									<li class="list-divider"></li>
+
+
+									<!--Menu list item-->
+
+
+									<!--Menu list item-->
+									<li>
+										<a href="#">
+											<i class="fa fa-cogs"></i>
+											<span class="menu-title">
+												<strong>配置</strong>
+											</span>
+											<i class="arrow"></i>
+										</a>
+
+										<!--Submenu-->
+										<ul class="collapse">
+											<li><a href="#">Link</a></li>
+											<li><a href="#">Another link</a></li>
+											<li><a href="#">Some else here</a></li>
+											<li class="list-divider"></li>
+											<li><a href="#">Separate link</a></li>
+
+										</ul>
+									</li>
+
+
+
+								</ul>
+
+
+								<!--Widget-->
+								<!--================================-->
+								<div class="mainnav-widget">
+
+									<!-- Show the button on collapsed navigation -->
+									<div class="show-small">
+										<a href="#" data-toggle="menu-widget" data-target="#demo-wg-server">
+											<i class="fa fa-desktop"></i>
+										</a>
+									</div>
+
+									<!-- Hide the content on collapsed navigation -->
+									<div id="demo-wg-server" class="hide-small mainnav-widget-content">
+										<ul class="list-group">
+											<li class="mar-btm">
+												<span class="label label-primary pull-right">15%</span>
+												<p>CPU Usage</p>
+												<div class="progress progress-sm">
+													<div class="progress-bar progress-bar-primary" style="width: 15%;">
+														<span class="sr-only">15%</span>
+													</div>
+												</div>
+											</li>
+											<li class="mar-btm">
+												<span class="label label-purple pull-right">75%</span>
+												<p>Bandwidth</p>
+												<div class="progress progress-sm">
+													<div class="progress-bar progress-bar-purple" style="width: 75%;">
+														<span class="sr-only">75%</span>
+													</div>
+												</div>
+											</li>
+											<li class="pad-ver"><a href="#" class="btn btn-success btn-bock">View Details</a></li>
+										</ul>
+									</div>
+								</div>
+								<!--================================-->
+								<!--End widget-->
+
+							</div>
+						</div>
+					</div>
+					<!--================================-->
+					<!--End menu-->
+
+
+				</div>
+			</nav>
+        {% endblock %}
+			<!--===================================================-->
+			<!--END MAIN NAVIGATION-->
+
+			<!--ASIDE-->
+			<!--===================================================-->
+			<aside id="aside-container">
+				<div id="aside">
+					<div class="nano">
+						<div class="nano-content">
+
+							<!--Nav tabs-->
+							<!--================================-->
+							<ul class="nav nav-tabs nav-justified">
+								<li class="active">
+									<a href="#demo-asd-tab-1" data-toggle="tab">
+										<i class="fa fa-comments"></i>
+										<span class="badge badge-purple">7</span>
+									</a>
+								</li>
+								<li>
+									<a href="#demo-asd-tab-2" data-toggle="tab">
+										<i class="fa fa-info-circle"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#demo-asd-tab-3" data-toggle="tab">
+										<i class="fa fa-wrench"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#demo-asd-tab-4" data-toggle="tab">
+										<i class="fa fa-shield"></i>
+										<span class="label label-success">New</span>
+									</a>
+								</li>
+							</ul>
+							<!--================================-->
+							<!--End nav tabs-->
+
+
+
+							<!-- Tabs Content -->
+							<!--================================-->
+							<div class="tab-content">
+
+								<!--First tab-->
+								<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+								<div class="tab-pane fade in active" id="demo-asd-tab-1">
+									<h4 class="pad-hor text-thin">
+										First tab
+									</h4>
+									<div class="pad-all">
+
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+									sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+									Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+									ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+									velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
+									et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+									</div>
+
+								</div>
+								<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+								<!--End first tab-->
+
+
+								<!--Second tab-->
+								<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+								<div class="tab-pane fade" id="demo-asd-tab-2">
+									<h4 class="pad-hor text-thin">
+										Second tab
+									</h4>
+									<div class="pad-all">
+
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+									sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+									Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+									ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+									velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
+									et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+									</div>
+								</div>
+								<!--End second tab-->
+								<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+								<!--Third tab-->
+								<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+								<div class="tab-pane fade" id="demo-asd-tab-3">
+									<h4 class="pad-hor text-thin">
+										Third tab
+									</h4>
+									<div class="pad-all">
+
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+									sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+									Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+									ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+									velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
+									et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+									</div>
+
+								</div>
+								<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+								<!--Third tab-->
+
+								<!--Fourth tab-->
+								<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+								<div class="tab-pane fade" id="demo-asd-tab-4">
+									<h4 class="pad-hor text-thin">
+										Fourth tab
+									</h4>
+									<div class="pad-all">
+
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+									sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+									Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+									ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+									velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
+									et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+
+									</div>
+
+								</div>
+								<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+								<!--Third tab (Settings)-->
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<!--===================================================-->
+			<!--END ASIDE-->
+
+		</div>
+    {% endblock %}
+
+
+        <!-- FOOTER -->
+        <!--===================================================-->
+
+    <footer id="footer">
+
+            <!-- Visible when footer positions are fixed -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="show-fixed pull-right">
+                <ul class="footer-list list-inline">
+                    <li>
+                        <p class="text-sm">SEO Proggres</p>
+                        <div class="progress progress-sm progress-light-base">
+                            <div style="width: 80%" class="progress-bar progress-bar-danger"></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <p class="text-sm">Online Tutorial</p>
+                        <div class="progress progress-sm progress-light-base">
+                            <div style="width: 80%" class="progress-bar progress-bar-primary"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="btn btn-sm btn-dark btn-active-success">Checkout</button>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <!-- Visible when footer positions are static -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <div class="hide-fixed pull-right pad-rgt">Currently v2.2.2</div>
+
+
+
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+            <!-- Remove the class name "show-fixed" and "hide-fixed" to make the content always appears. -->
+            <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <p class="pad-lft">&#0169; 2015 Your Company</p>
+
+
+
+        </footer>
+        <!--===================================================-->
+        <!-- END FOOTER -->
+
+
+        <!-- SCROLL TOP BUTTON -->
+        <!--===================================================-->
+        <button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+        <!--===================================================-->
+
+
+
+	</div>
+<!--===================================================-->
+<!-- END OF CONTAINER -->
+
+
+{% endblock %}
