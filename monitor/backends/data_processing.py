@@ -66,7 +66,7 @@ class DataHandler(object):
                         trigger_obj = expression.trigger_set.select_related()
                         for trigger in trigger_obj:
                             self.monitor_dic[h]['triggers'][trigger.name] = trigger
-            self.monitor_dic[h].setdefault('status_last_check', time.time())
+                self.monitor_dic[h].setdefault('status_last_check', time.time())
             self.last_loading_time = time.time()
             # print('公共字典：%s' %self.monitor_dic)
 

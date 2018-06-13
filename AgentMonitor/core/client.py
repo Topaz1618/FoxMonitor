@@ -3,7 +3,7 @@
 import time
 from conf import settings
 import urllib
-# import urllib.request
+import urllib.request
 import urllib.parse
 import  json
 import threading
@@ -18,8 +18,8 @@ class ClientHandle(object):
         request_type = settings.configs['urls']['get_configs'][1]
         url = "%s/%s" %(settings.configs['urls']['get_configs'][0],settings.configs['HostID'])
         get_configs = self.url_request(request_type,url)
-        get_configs = json.loads(get_configs.decode())
         print(get_configs)
+        get_configs = json.loads(get_configs.decode())
         self.agent_data.update(get_configs)
 
 
