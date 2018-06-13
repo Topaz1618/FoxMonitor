@@ -19,10 +19,9 @@
 
 ### 架构简要说明
 ```
-├── AgentMonitor(client端)
+┌── AgentMonitor(client端)
 ├── monitor(核心代码)
 ├── static(静态文件)
-├── handler(核心代码)
 ├── main.py(运行 Server)
 ├── static(静态文件)
 ├── templates(模板)
@@ -65,7 +64,7 @@ vim settings.py
 }
 ```
 
-4.运行
+5.运行
 ```
  python3 manage.py runserver 0.0.0.0:9000  启动监控服务web端
 
@@ -108,7 +107,7 @@ vim settings.py
 
 ### 注意事项
 1. 目前只支持 Python3
-2. Mac 和 Linux 下可用，Windows 环境未测试
+2. Mac ,Linux 和 Windows下可用。
 
 
 ### LICENSE
