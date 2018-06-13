@@ -12,10 +12,10 @@
 
 
 ### 环境
- Python 3
- Centos 7.4/Mac
- Redis
- Django
+- Python 3
+- Centos 7.4/Mac
+- Redis
+- Django
 
 ### 架构简要说明
 ```
@@ -29,6 +29,7 @@
 ├── tests(测试文件)
 ├── README.md(项目说明)
 └── requirements.txt(python库依赖)
+```
 
 ### 安装与运行步骤
 
