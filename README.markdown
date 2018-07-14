@@ -110,7 +110,3 @@ vim settings.py
 2. Mac ,Linux 和 Windows下可用。
 
 
-### LICENSE
-开源协议：MPL
-
-请遵守MPL协议，对Minos进行二次开发与使用。
