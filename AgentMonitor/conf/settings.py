@@ -1,6 +1,11 @@
 #_*_coding:utf-8_*_
-# Author:Topaz
+"""
+Client configuration
 
+"""
+
+__version__ = '1.0'
+__author__ = 'topaz1618@163.com'
 
 configs = {
     'HostID':1,
