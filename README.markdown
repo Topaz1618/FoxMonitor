@@ -90,7 +90,7 @@ A distributed monitoring system developed based on Django, with reference to Zab
 ## Screenshots
 
 ### 【Main Page】
-![](https://github.com/Topaz1618/MyMonitor/blob/master/statics/unity/img/monitor.png)
+![](https://github.com/Topaz1618/MyMonitor/blob/master/statics/unity/img/main_page.png)
 
 ### 【List Of All Hosts】
 ![](https://github.com/Topaz1618/MyMonitor/blob/master/statics/unity/img/monitor2.png)
