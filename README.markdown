@@ -74,7 +74,7 @@ Made by [Topaz](https://topaz1618.github.io/about)([Website](http://topazaws.com
  pip3  install  psutil
 ```
 
-2. Configuration
+2.Configuration
 ```
  $cd AgentMonitor/
  $vim  conf/settings.py
