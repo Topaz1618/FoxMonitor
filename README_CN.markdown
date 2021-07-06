@@ -1,5 +1,9 @@
-# Mymonitor
+<img src='statics/unity/img/FoxMonitor.png' width='380' title='MeowFile, A file management system'>
+
 基于 Django 开发的分布式监控系统，参考zabbix,openfalcon架构，实现前端、后端、监控插件、画图、数据优化存储等
+
+Made by [Topaz](https://topaz1618.github.io/about)|[Website](http://topazaws.com/)|[Blog](https://topaz1618.github.io/blog/)
+[Enlish README](https://github.com/Topaz1618/FoxMonitor/blob/master/README.markdown)
 
 ### 功能
 - 系统和服务监控
