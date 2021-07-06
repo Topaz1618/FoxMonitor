@@ -4,4 +4,4 @@ A distributed monitoring system developed based on Django, with reference to zab
 
 Made by [Topaz](https://topaz1618.github.io/about)|[Website](http://topazaws.com/)|[Blog](https://topaz1618.github.io/blog/)
 
-[Chinese README](https://github.com/Topaz1618/FoxMonitor/blob/master/README_CN.md)
+[Chinese README](https://github.com/Topaz1618/FoxMonitor/blob/master/README_CN.markdown)
