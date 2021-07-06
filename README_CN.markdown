@@ -102,7 +102,7 @@ vim settings.py
 
 ### 截图
 1.主页面
-![](https://github.com/Topaz1618/MyMonitor/blob/master/statics/unity/img/monitor.png)
+![](https://github.com/Topaz1618/MyMonitor/blob/master/statics/unity/img/main_page.png)
 2.主机页
 ![](https://github.com/Topaz1618/MyMonitor/blob/master/statics/unity/img/monitor2.png)
 3.监控图
