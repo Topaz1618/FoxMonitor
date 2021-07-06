@@ -92,16 +92,14 @@ Made by [Topaz](https://topaz1618.github.io/about)([Website](http://topazaws.com
 ## Screenshots
 
 ###【Main Page】
-![avatar](static/img/login.png)
+![](https://github.com/Topaz1618/MyMonitor/blob/master/statics/unity/img/monitor.png)
 
 ###【List Of All Hosts】
-![avatar](static/img/terminal.png)
+![](https://github.com/Topaz1618/MyMonitor/blob/master/statics/unity/img/monitor2.png)
 
 ###【Monitoring Chart】
-![avatar](static/img/terminal1.png)
-
-###【Main Page】
-![avatar](static/img/terminal2.png)
+![](https://github.com/Topaz1618/MyMonitor/blob/master/statics/unity/img/monitor7.png)
+![](https://github.com/Topaz1618/MyMonitor/blob/master/statics/unity/img/monitor6.png)
 
 
 ## Precautions
