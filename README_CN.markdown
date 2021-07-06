@@ -115,3 +115,5 @@ vim settings.py
 2. Mac ,Linux 和 Windows下可用。
 
 
+## License
+Licensed under the MIT license
