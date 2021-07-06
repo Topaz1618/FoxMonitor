@@ -1,4 +1,4 @@
-<img src='static/images/meowfile.png' width='400' title='MeowFile, A file management system'>
+<img src='statics/unity/img/FoxMonitor.png' width='380' title='MeowFile, A file management system'>
 
 A distributed monitoring system developed based on Django, with reference to zabbix, openfalcon architecture, to achieve front-end, back-end, monitoring plug-ins, drawing, data optimized storage, etc. 
 
