@@ -1,8 +1,6 @@
 <img src='statics/unity/img/FoxMonitor.png' width='380' title='FoxMonitor, A distributed monitoring system'>
 
-A distributed monitoring system developed based on Django, with reference to Zabbix, Open-Falcon architecture, to achieve front-end, back-end, monitoring plug-ins, drawing, data optimized storage, etc. 
-
-[Topaz](https://topaz1618.github.io/about)([Website](http://topazaws.com/)|[Blog](https://topaz1618.github.io/blog/))
+A distributed monitoring system developed based on Django, with reference to Zabbix, Open-Falcon architecture, to achieve front-end, back-end, monitoring plug-ins, drawing, data optimized storage, etc.  By [Topaz](https://topaz1618.github.io/about)([Website](http://topazaws.com/)|[Blog](https://topaz1618.github.io/blog/))
 
 [Chinese README](https://github.com/Topaz1618/FoxMonitor/blob/master/README_CN.markdown)
 
