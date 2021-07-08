@@ -77,9 +77,9 @@ A distributed monitoring system developed based on Django, with reference to Zab
  $cd AgentMonitor/
  $vim  conf/settings.py
  configs = {
-   	'HostID':1,						#clinet 端id 必须唯一
-   	'ServerIp':'192.168.43.136',	#指向 server 端 ip
-   	'ServerPort':'8007',			#指向 server 端 port
+   	'HostID':1, // The clinet end id must be unique
+   	'ServerIp':'192.168.43.136',	// Server Ip
+   	'ServerPort':'8007',			# Server Port
  }
 ```
 3.Run
