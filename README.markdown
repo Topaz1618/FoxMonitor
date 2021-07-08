@@ -79,7 +79,7 @@ A distributed monitoring system developed based on Django, with reference to Zab
  configs = {
    	'HostID':1,                  // The clinet end id must be unique
    	'ServerIp':'192.168.43.136',	// Server Ip
-   	'ServerPort':'8007',		  // Server Port
+   	'ServerPort':'8007',		 // Server Port
  }
 ```
 3.Run
