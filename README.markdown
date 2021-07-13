@@ -25,8 +25,8 @@ A distributed monitoring system developed based on Django, with reference to Zab
 1. Download FoxMonitor
 
 ```
- $git clone https://github.com/Topaz1618/FoxMonitor.git
- $cd FoxMonitor/
+ git clone https://github.com/Topaz1618/FoxMonitor.git
+ cd FoxMonitor/
 ```
 
 2.Install dependencies
@@ -36,10 +36,10 @@ A distributed monitoring system developed based on Django, with reference to Zab
 
 3.Create user & sync data
 ```
- - Synchronize the database
+ // Synchronize the database
  python manage.py migrate
 
- - Create admin user
+ // Create admin user
  python manage.py createsuperuser
 ```
 
