@@ -1,4 +1,4 @@
-<img src='statics/unity/img/FoxMonitor.png' width='380' title='MeowFile, A file management system'>
+<img src='statics/unity/img/fox_logo.png' width='380' title='MeowFile, A file management system'>
 
 基于 Django 开发的分布式监控系统，参考zabbix,openfalcon架构，实现前端、后端、监控插件、画图、数据优化存储等
 
